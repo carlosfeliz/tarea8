@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'input_screen.dart';
-import 'map_screen.dart';
-import 'location_provider.dart';
+import 'services/database_service.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,18 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => LocationProvider(),
+    return MultiProvider(
+      providers: [
+        Provider<DatabaseService>(create: (_) => DatabaseService()),
+      ],
       child: MaterialApp(
-        title: 'Mapa de Localización',
+        title: 'Seguridad 20185685',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute: '/',
-        routes: {
-          '/': (context) => InputScreen(),
-          '/map': (context) => const MapScreen(),
-        },
+        home: HomePage(),
       ),
     );
   }
