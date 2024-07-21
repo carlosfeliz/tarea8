@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Acerca de'),
+        title: const Text('Acerca de'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -18,15 +20,15 @@ class AboutPage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Nombre: Juan Pérez',
+              'Nombre: Carlos Alberto',
               style: TextStyle(fontSize: 18),
             ),
             Text(
-              'Apellido: López',
+              'Apellido: Feliz Recio',
               style: TextStyle(fontSize: 18),
             ),
             Text(
-              'Matrícula: 20185685',
+              'Matrícula: 2021-2322',
               style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 20),

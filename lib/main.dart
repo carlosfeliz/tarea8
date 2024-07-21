@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
         Provider<DatabaseService>(create: (_) => DatabaseService()),
       ],
       child: MaterialApp(
-        title: 'Seguridad 20185685',
+        debugShowCheckedModeBanner: false,
+        title: 'CFRECIO Seguridad 2021-2322',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
